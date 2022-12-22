@@ -5,25 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/main.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>PHP Quiz</title>
 </head>
 <body>
     <header>
-        <img class="logo" src="images/logo.png" alt="">
-        <h5 class="big-title">PHP Knowledge Test</h5>
+        <img class="logo" src="images/logo.png" height="50px" alt="">
+        <h3 class="big-title">PHP Knowledge Test</h3>
     </header>
     <main>
         <nav class="side-bar">
-            <i class="uil uil-play-circle"></i>
-            <i class="uil uil-sign-alt"></i>
-            <i class="uil uil-question-circle"></i>
-            <i class="uil uil-award"></i>
+            <button id="redirect-home" class="active"><i  class="uil uil-play-circle"></i></button>
+            <button id="redirect-guide"><i class="uil uil-sign-alt"></i></button>
+            <button id="redirect-quiz"><i class="uil uil-question-circle"></i></button>
+            <button id="redirect-result"><i class="uil uil-award"></i></button>
         </nav>
-        <div>
-            <section class="home">
+        <div class="sous-main">
+            <section id="home" class="home">
                 <div>
-                    <img src="" alt="">
+                    <img src="images/logo.png" height="200px" alt="">
                     <h4>PHP Knowledge Test</h4>
                 </div>
                 <div>
@@ -32,7 +33,7 @@
                     <button>GET STARTED</button>
                 </div>
             </section>
-            <section class="guide">
+            <section id="guide" class="guide">
             <h4><i class="uil uil-sign-alt"></i> Guide</h4>
                 <div>
                     <p>hello</p>
@@ -41,31 +42,55 @@
                     <button>TAKE A QUIZ</button>
                 </div>
             </section>
-            <section class="quiz">
-                <div class="param">
+            <section id="quiz" class="quiz">
+                <form class="param">
                     <p>choose how many questions you like to answer</p>
-                    <input id="questions-number" type="number" min="3">
-                    <button>Let's Go</button>
-                </div>
+                    <input id="questions-number" type="number" min="3" required>
+                    <button id="start">Let's Go</button>
+                </form>
                 <div class="questions">
                     <h5 class="current-question">QUESTION <span></span> / <span></span></h5>
                     <div class="progress-border">
                         <div class="progress-fill"></div>
                     </div>
-                    <div>
-                        <div>
-                            <input type="">
+                    <div class="answers">
+                        <div class="option">
+                            <p class="answer" data-number="1"> <span>1</span> answers 1</p>
+                        </div>
+                        <div class="option">
+                            <p class="answer" data-number="2"> <span>2</span> answers 2</p>
+                        </div>
+                        <div class="option">
+                            <p class="answer" data-number="3"> <span>3</span> answers 3</p>
+                        </div>
+                        <div class="option">
+                            <p class="answer" data-number="4"> <span>4</span> answers 4</p>
                         </div>
                     </div>
                 </div>
             </section>
+            <section id="result" class="result">
+                <h4>RESULT</h4>
+                <div class="feedback-container">
+                    <h5 class="feedback">congrats</h5>
+                    <p>you have answer <span></span> from <span></span> questions correctly</p>
+                    <button>Play Again</button>
+                </div>
+                
+            </section>
         </div>
     </main>
+
+
+    
 
 
     <!-- <i class="uil uil-play-circle"></i> -->
     <!-- <i class="uil uil-sign-alt"></i> -->
     <!-- <i class="uil uil-question-circle"></i> -->
     <!-- <i class="uil uil-award"></i> -->
+
+    <script src="assets/scripts/questions.js"></script>
+    <script src="assets/scripts/app.js" type="module"></script>
 </body>
 </html>

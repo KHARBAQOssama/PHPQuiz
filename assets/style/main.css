@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 8vh;
+}
+.big-title{
+    color: #5874CC;
+    padding: 0 0.5em;
+}
+main{
+    height: 92vh;
+    display: flex;
+}
+nav{
+    background-color: rgb(255, 255, 255);
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1em ;
+}
+nav button {
+    color: #5874CC;
+    margin-bottom: 1em ;
+    font-size: 1.7em;
+    width: 100%;
+    border: none;
+    background-color: white;
+
+}
+.sous-main{
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1em;
+    border-radius: 1em 1em 0 1em ;
+    background-color: #5874CC;
+    display: flex;
+    flex-direction: column;
+    overflow: scroll;
+    -webkit-border-radius: 1em 1em 0 1em ;
+    -moz-border-radius: 1em 1em 0 1em ;
+    -ms-border-radius: 1em 1em 0 1em ;
+    -o-border-radius: 1em 1em 0 1em ;
+}
+.home{
+    background-color: rgba(255, 255, 255, 0.555);
+    /* display: flex; */
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2em;
+    border-radius: 1em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+.quiz{display: flex;}
+section{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.home div {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feedback-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+}
+
+.active{
+    background-color: #5874CC !important;
+    
+}
+
+.active i{
+    color: white !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: red;
+    border-radius: 10px;
+  }
