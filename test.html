@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style/style.css">
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>PHP Quiz</title>
+</head>
+<body>
+
+    <section id="quiz" class="quiz">
+        <form class="param">
+            <p>choose how many questions you like to answer</p>
+            <input id="questions-number" type="number" min="3" required>
+            <button type="submit" id="start">Let's Go</button>
+        </form>
+        <div class="questions">
+            <h5 class="current-question">QUESTION <span></span> / <span></span></h5>
+            <div class="progress-border">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="answers">
+                    <button class="answer" data-number="1"> <span>1</span>
+                    </button>
+                
+                    <button class="answer" data-number="2"> <span>2</span>
+                    </button>
+                
+                    <button class="answer" data-number="3"> <span>3</span>
+                    </button>
+                
+                    <button class="answer" data-number="4"> <span>4</span>
+                    </button>
+
+                    <button id="submit-answer">Next Question</button>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="assets/scripts/questions.js"></script>
+    <script src="assets/scripts/app.js" type="module"></script>
+</body>
+</html>

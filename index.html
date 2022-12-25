@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style/style.css">
-    <link rel="stylesheet" href="assets/style/main.css">
+    <!-- <link rel="stylesheet" href="assets/style/main.css"> -->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <title>PHP Quiz</title>
 </head>
@@ -15,80 +15,83 @@
         <h3 class="big-title">PHP Knowledge Test</h3>
     </header>
     <main>
-        <nav class="side-bar">
-            <button id="redirect-home" class="active"><i  class="uil uil-play-circle"></i></button>
-            <button id="redirect-guide"><i class="uil uil-sign-alt"></i></button>
-            <button id="redirect-quiz"><i class="uil uil-question-circle"></i></button>
-            <button id="redirect-result"><i class="uil uil-award"></i></button>
-        </nav>
-        <div class="sous-main">
-            <section id="home" class="home">
-                <div>
+            <!-- home part -->
+            <section id="home" class="home active">
                     <img src="images/logo.png" height="200px" alt="">
-                    <h4>PHP Knowledge Test</h4>
-                </div>
-                <div>
-                    <h4>welcome</h4>
+                    <h2>welcome</h2>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt aliquid quas id laboriosam aliquam laudantium quidem, nisi recusandae quo consequuntur porro libero</p>
-                    <button>GET STARTED</button>
-                </div>
+                    <button class="start-btn" id="start-btn">GET STARTED</button>
             </section>
+
+            <!-- guide part -->
             <section id="guide" class="guide">
-            <h4><i class="uil uil-sign-alt"></i> Guide</h4>
-                <div>
-                    <p>hello</p>
-                    <p>hello</p>
-                    <p>hello</p>
-                    <button>TAKE A QUIZ</button>
+                <h4><i class="uil uil-sign-alt"></i> Guide</h4>
+                <div class="guide-info">
+                    <div>
+                        <p><span class="order">1</span>You have to choose How Many Questions You Want Answer</p>
+                        <p><span class="order">2</span>You have to choose How Many Questions You Want Answer</p>
+                        <p><span class="order">3</span>You have to choose How Many Questions You Want Answer</p>
+                        <p><span class="order">4</span>You have to choose How Many Questions You Want Answer</p>
+                        <div>
+                            <button id="exit-guide">EXIT</button>
+                            <button id="take-quiz">TAKE A QUIZ</button>
+                        </div>
+                        
+                    </div>
+                    <img src="images/signpost.png" height="120px" alt="">
                 </div>
             </section>
+
+            <!-- quiz part -->
             <section id="quiz" class="quiz">
-                <form class="param">
+                <!-- <form class="param">
                     <p>choose how many questions you like to answer</p>
                     <input id="questions-number" type="number" min="3" required>
                     <button id="start">Let's Go</button>
-                </form>
-                <div class="questions">
-                    <h5 class="current-question">QUESTION <span></span> / <span></span></h5>
-                    <div class="progress-border">
-                        <div class="progress-fill"></div>
+                </form> -->
+                    <header>
+                        <div class="timer"><i class="uil uil-stopwatch"></i><span class="time-sec">15</span></div>
+                        <div class="progress-container">
+                            <div class="progress-fill" id="progress-fill">
+                                <span class="percentage" id="percentage">20%</span>
+                            </div>
+                        </div>
+                    </header>
+
+                    <div class="question" id="question" >
+
                     </div>
                     <div class="answers">
-                        <div class="option">
-                            <p class="answer" data-number="1"> <span>1</span> answers 1</p>
+                        <div class="option" data-number="1"><span>  1 - </span>
                         </div>
-                        <div class="option">
-                            <p class="answer" data-number="2"> <span>2</span> answers 2</p>
+                        <div class="option" data-number="2"><span>  2 - </span>
                         </div>
-                        <div class="option">
-                            <p class="answer" data-number="3"> <span>3</span> answers 3</p>
+                        <div class="option" data-number="3"><span>  3 - </span>
                         </div>
-                        <div class="option">
-                            <p class="answer" data-number="4"> <span>4</span> answers 4</p>
+                        <div class="option" data-number="4"><span>  4 - </span>
                         </div>
+                        <div class="hidden" data-number="8"></div>
+                    </div>
+                    <footer>
+                        <button class="next">Next Question</button>
+                    </footer>
+            </section>
+
+            <!-- result part -->
+            <section id="result" class="result">
+                <h4><i class="uil uil-feedback"></i> RESULT</h4>
+                <div class="feedback-container">
+                    <h3 class="feedback" id="feedback">congrats</h3>
+                    <p>you have answer <span class="questions-answered"></span> from <span class="questions-total"></span> questions correctly</p>
+                    
+                    <div>
+                        <button id="play-again">Play Again</button>
+                        <button id="exit-quiz">Exit Quiz</button>
                     </div>
                 </div>
             </section>
-            <section id="result" class="result">
-                <h4>RESULT</h4>
-                <div class="feedback-container">
-                    <h5 class="feedback">congrats</h5>
-                    <p>you have answer <span></span> from <span></span> questions correctly</p>
-                    <button>Play Again</button>
-                </div>
-                
-            </section>
-        </div>
+
     </main>
-
-
-    
-
-
-    <!-- <i class="uil uil-play-circle"></i> -->
-    <!-- <i class="uil uil-sign-alt"></i> -->
-    <!-- <i class="uil uil-question-circle"></i> -->
-    <!-- <i class="uil uil-award"></i> -->
 
     <script src="assets/scripts/questions.js"></script>
     <script src="assets/scripts/app.js" type="module"></script>

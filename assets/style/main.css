@@ -35,7 +35,7 @@ nav button {
 
 }
 .sous-main{
-    justify-content: center;
+    position: relative;
     align-items: center;
     width: 100%;
     padding: 1em;
@@ -51,25 +51,26 @@ nav button {
 }
 .home{
     background-color: rgba(255, 255, 255, 0.555);
-    /* display: flex; */
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     padding: 2em;
-    border-radius: 1em;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -ms-border-radius: 1em;
-    -o-border-radius: 1em;
+    border-radius: 0 3em 0 3em;
+    -webkit-border-radius: 0 3em 0 3em;
+    -moz-border-radius: 0 3em 0 3em;
+    -ms-border-radius: 0 3em 0 3em;
+    -o-border-radius: 0 3em 0 3em;
 }
-.quiz{display: flex;}
+
 section{
-    display: none;
+    display: flex;
     flex-direction: column;
     align-items: center;
 }
 .home div {
-    width: 40%;
+    width: 40% ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +87,12 @@ section{
 
 .active{
     background-color: #5874CC !important;
-    
+    border-radius: 0 !important;
+    padding: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    -ms-border-radius: 0 !important;
+    -o-border-radius: 0 !important;
 }
 
 .active i{
@@ -94,14 +100,47 @@ section{
 }
 
 
+button{
+    border: none;
+    padding: 0.4em 0.6em;
+    border-radius: 10px 0 10px 0 ;
+    -webkit-border-radius: 10px 0 10px 0 ;
+    -moz-border-radius: 10px 0 10px 0 ;
+    -ms-border-radius: 10px 0 10px 0 ;
+    -o-border-radius: 10px 0 10px 0 ;
+}
+
+[description="d-none"] {
+    display: none !important;
+}
 
 
+.answers{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
 
+.questions{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
-
-
-
-
+.answers button{
+    width: 80%;
+    margin: 0.5em 0;
+}
+.answers button span{
+    float: left;
+    margin: 0 0.4em;
+}
+#submit-answer{
+    width: 35%;
+    margin-left: auto;
+}
 
 
 
@@ -110,14 +149,3 @@ section{
     width: 0px;
   }
   
-  /* Track */
-  ::-webkit-scrollbar-track {
-    box-shadow: inset 0 0 5px grey;
-    border-radius: 10px;
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: red;
-    border-radius: 10px;
-  }
