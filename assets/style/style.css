@@ -3,14 +3,21 @@
   font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body header {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 8vh;
 }
 body header img {
@@ -20,40 +27,117 @@ body header h3 {
   margin-left: 0.5em;
   color: #5874CC;
 }
-body main {
+body div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body div .stepper-component {
+  height: 65vh;
+  width: 8%;
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+}
+body div .stepper-component h3 {
+  height: 5vh;
+  width: 5vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  background-color: rgba(131, 156, 239, 0.1921568627);
+  color: #5874CC;
+  border: 2px solid #5874CC;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+body div .stepper-component #hp {
+  background-color: #5874CC;
+  color: white;
+}
+body div .stepper-component .to-container {
+  height: 15vh;
+  width: 6px;
+  background-color: rgba(131, 156, 239, 0.1921568627);
+}
+body div .stepper-component .to-container .to {
+  width: 100%;
+  height: 0%;
+  background-color: #5874CC;
+  transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  -o-transition: all 1s ease;
+}
+body div main {
+  width: 92%;
   background-color: #5874CC;
   color: white;
   height: 92vh;
   overflow: scroll;
   position: relative;
+  border-radius: 2em 0 0 0;
 }
-body main section {
+body div main section {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.377);
+  -webkit-box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.377);
+          box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.377);
   width: 60%;
   border-radius: 4em 0 4em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-body main .home {
+body div main .home {
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.361);
   padding: 2em;
 }
-body main .home p {
+body div main .home p {
   text-align: center;
   color: #475a9c;
 }
-body main .guide {
+body div main .guide {
   opacity: 0;
   transition: all 0.4s ease;
   transform: translate(-50%, -50%) scale(0.9);
@@ -66,30 +150,57 @@ body main .guide {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-body main .guide h4 {
+body div main .guide h4 {
   width: 100%;
   text-align: center;
   padding-top: 1em;
   font-size: larger;
   font-weight: bolder;
 }
-body main .guide h4 i {
+body div main .guide h4 i {
   margin-right: 0.4em;
 }
-body main .guide .guide-info {
+body div main .guide .guide-info {
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1em;
 }
-body main .guide .guide-info div {
-  margin: 1em 0;
+body div main .guide .guide-info div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-body main .guide .guide-info div .order {
-  padding: 0.3em 1em;
+body div main .guide .guide-info div p {
+  padding: 0.3em 0 !important;
+}
+body div main .guide .guide-info div p .order {
+  padding: 0.1em 1em;
   margin-right: 0.5em;
 }
-body main .quiz {
+body div main .guide .guide-info div .guide-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+body div main .quiz {
   opacity: 0;
   transition: all 0.4s ease;
   transform: translate(-50%, -50%) scale(0.9);
@@ -102,20 +213,29 @@ body main .quiz {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-body main .quiz header {
+body div main .quiz header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 1em 0;
 }
-body main .quiz header .timer {
+body div main .quiz header .timer {
   width: 10%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border: 2px solid white;
   border-radius: 0.7em 0 0.7em 0;
   margin-bottom: 1em;
 }
-body main .quiz header .timer span {
+body div main .quiz header .timer span {
   background-color: white;
   color: #5874CC;
   border-radius: 0.7em 0 0.6em 0;
@@ -126,50 +246,62 @@ body main .quiz header .timer span {
   -ms-border-radius: 0.7em 0 0.6em 0;
   -o-border-radius: 0.7em 0 0.6em 0;
 }
-body main .quiz header .timer i {
+body div main .quiz header .timer i {
   text-align: center;
   width: 50%;
 }
-body main .quiz header .progress-container {
+body div main .quiz header .progress-container {
   width: 60%;
   border: 2px solid white;
   border-radius: 0.7em 0 0.7em 0;
+  outline: none;
 }
-body main .quiz header .progress-container .progress-fill {
-  border-radius: 0.6em 0 0.6em 0;
-  text-align: center;
+body div main .quiz header .progress-container .progress-fill {
+  outline: none;
+  border-radius: 0.5em 0 0.5em 0;
   background-color: white;
   transition: all 0.5s ease;
-  -webkit-border-radius: 0.6em 0 0.6em 0;
-  -moz-border-radius: 0.6em 0 0.6em 0;
-  -ms-border-radius: 0.6em 0 0.6em 0;
-  -o-border-radius: 0.6em 0 0.6em 0;
+  -webkit-border-radius: 0.5em 0 0.5em 0;
+  -moz-border-radius: 0.5em 0 0.5em 0;
+  -ms-border-radius: 0.5em 0 0.5em 0;
+  -o-border-radius: 0.5em 0 0.5em 0;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-body main .quiz header .progress-container .progress-fill .percentage {
+body div main .quiz header .progress-container .progress-fill .percentage {
+  width: 100%;
+  text-align: center !important;
   color: #5874CC;
 }
-body main .quiz .question {
+body div main .quiz .question {
   width: 90%;
   text-align: center;
   margin: auto;
   margin-top: 1em;
   margin-bottom: 1em;
 }
-body main .quiz .answers {
+body div main .quiz .answers {
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
-body main .quiz .answers .hidden {
+body div main .quiz .answers .hidden {
   display: none !important;
 }
-body main .quiz .answers .option {
+body div main .quiz .answers .option {
   cursor: pointer;
   border: 2px solid white;
   border-radius: 0.5em 0 0.5em 0;
@@ -181,7 +313,7 @@ body main .quiz .answers .option {
   -ms-border-radius: 0.5em 0 0.5em 0;
   -o-border-radius: 0.5em 0 0.5em 0;
 }
-body main .quiz .answers .option span {
+body div main .quiz .answers .option span {
   border: 2px solid white;
   border-radius: 0.4em 0 0.4em 0;
   text-align: center;
@@ -193,18 +325,27 @@ body main .quiz .answers .option span {
   -ms-border-radius: 0.4em 0 0.4em 0;
   -o-border-radius: 0.4em 0 0.4em 0;
 }
-body main .quiz .answers .option.correct {
+body div main .quiz .answers .option.disabled {
+  pointer-events: none;
+}
+body div main .quiz .answers .option.correct {
   background-color: #00d000;
 }
-body main .quiz .answers .option.incorrect {
+body div main .quiz .answers .option.incorrect {
   background-color: #d03400;
 }
-body main .quiz footer {
+body div main .quiz footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-body main .quiz footer .next {
+body div main .quiz footer .next {
   opacity: 0;
   transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
@@ -212,10 +353,10 @@ body main .quiz footer .next {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-body main .quiz footer .next.show {
+body div main .quiz footer .next.show {
   opacity: 1;
 }
-body main .result {
+body div main .result {
   opacity: 0;
   transition: all 0.4s ease;
   transform: translate(-50%, -50%) scale(0.9);
@@ -228,33 +369,47 @@ body main .result {
   -ms-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
 }
-body main .result h4 {
+body div main .result h4 {
   width: 100%;
   text-align: center;
   padding-top: 1em;
   font-size: larger;
   font-weight: bolder;
 }
-body main .result h4 i {
+body div main .result h4 i {
   margin-right: 0.4em;
 }
-body main .result .feedback-container {
+body div main .result .feedback-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-body main .result .feedback-container .feedback {
+body div main .result .feedback-container .feedback {
   font-size: larger;
   float: left;
   letter-spacing: 1px;
   -webkit-text-stroke: 1px rgb(255, 255, 255);
   -webkit-text-fill-color: #5874CC;
 }
-body main .home.active,
-body main .guide.active,
-body main .quiz.active,
-body main .result.active {
+body div main .result .feedback-container p {
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+body div main .home.active,
+body div main .guide.active,
+body div main .quiz.active,
+body div main .result.active {
   opacity: 1;
   z-index: 5;
   transform: translate(-50%, -50%) scale(1);
@@ -286,4 +441,21 @@ button {
   border: none;
   border-radius: 0.7em 0 0.7em 0;
   cursor: pointer;
-}/*# sourceMappingURL=style.css.map */
+  height: 30px !important;
+  font-size: x-small;
+}
+
+@media only screen and (max-width: 760px) {
+  body div main section {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 500px) {
+  body div main section {
+    width: 90%;
+  }
+  .guide-info img {
+    display: none;
+  }
+}
+/*# sourceMappingURL=style.css.map */

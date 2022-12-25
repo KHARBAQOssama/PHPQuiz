@@ -14,6 +14,23 @@
         <img class="logo" src="images/logo.png" height="50px" alt="">
         <h3 class="big-title">PHP Knowledge Test</h3>
     </header>
+    <div>
+        <div class="stepper-component">
+            <h3 id="hp"><i class="uil uil-play"></i></h3>
+            <div class="to-container">
+                <div class="to" id="to1"></div>
+            </div>
+            <h3 id="gp"><i class="uil uil-sign-alt"></i></h3>
+            <div class="to-container">
+                <div class="to" id="to2"></div>
+            </div>
+            <h3 id="qp"><i class="uil uil-map-marker-question"></i></h3>
+            <div class="to-container">
+                <div class="to" id="to3"></div>
+            </div>
+            <h3 id="rp"><i class="uil uil-clipboard"></i></h3>
+            
+        </div>
     <main>
             <!-- home part -->
             <section id="home" class="home active">
@@ -28,11 +45,11 @@
                 <h4><i class="uil uil-sign-alt"></i> Guide</h4>
                 <div class="guide-info">
                     <div>
-                        <p><span class="order">1</span>You have to choose How Many Questions You Want Answer</p>
-                        <p><span class="order">2</span>You have to choose How Many Questions You Want Answer</p>
-                        <p><span class="order">3</span>You have to choose How Many Questions You Want Answer</p>
-                        <p><span class="order">4</span>You have to choose How Many Questions You Want Answer</p>
-                        <div>
+                        <p><span class="order">1</span>this is the first information about our quiz</p>
+                        <p><span class="order">2</span>this is the second information about our quiz</p>
+                        <p><span class="order">3</span>this is the third information about our quiz</p>
+                        <p><span class="order">4</span>this is the fourth information about our quiz</p>
+                        <div class="guide-buttons">
                             <button id="exit-guide">EXIT</button>
                             <button id="take-quiz">TAKE A QUIZ</button>
                         </div>
@@ -82,16 +99,15 @@
                 <h4><i class="uil uil-feedback"></i> RESULT</h4>
                 <div class="feedback-container">
                     <h3 class="feedback" id="feedback">congrats</h3>
-                    <p>you have answer <span class="questions-answered"></span> from <span class="questions-total"></span> questions correctly</p>
+                    <p>you have got <span id="questions-answered"></span> from <span id="questions-total"></span> points successfully</p>
                     
                     <div>
-                        <button id="play-again">Play Again</button>
                         <button id="exit-quiz">Exit Quiz</button>
                     </div>
                 </div>
             </section>
 
-    </main>
+    </main></div>
 
     <script src="assets/scripts/questions.js"></script>
     <script src="assets/scripts/app.js" type="module"></script>
