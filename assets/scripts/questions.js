@@ -1,4 +1,4 @@
-export var questions = 
+var questions = 
       [
         {
           question: "Que signifie PHP?",

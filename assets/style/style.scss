@@ -156,6 +156,33 @@ body{
                             
                         }
                     }
+
+                    .param{
+                        opacity: 0;
+                        h3{
+                            margin: 1em 0;
+                        }
+                        p{
+                            text-align: center;
+                        }
+                        span{
+                            margin-top: 1em;
+                            font-size: xx-large;
+                            font-weight: bold;
+                        }
+                        #questions-number{
+                            width:180px;
+                            text-align: center;
+                            border: none;
+                            -webkit-appearance: none;
+                            border-radius: 15px;
+                            -webkit-border-radius: 15px;
+                            -moz-border-radius: 15px;
+                            -ms-border-radius: 15px;
+                            -o-border-radius: 15px;
+}
+
+                    }
                     .quiz{
                         opacity: 0;
                         transition: all 0.4s ease;
@@ -224,7 +251,7 @@ body{
                                     }
                             }
                         }
-                        .question{
+                        #question{
                             width: 90%;
                             text-align: center;
                             margin: auto;
@@ -346,6 +373,7 @@ body{
                         }
 
                     }
+                    .param.active,
                     .home.active,
                     .guide.active,
                     .quiz.active,
@@ -400,3 +428,32 @@ button{
         display: none;
     }
 }
+
+
+
+input[type="range"] {
+    display: block;
+    -webkit-appearance: none;
+    background-color: #bdc3c7;
+    height: 5px;
+    border-radius: 5px;
+    margin: 0 auto;
+    outline: 0;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #708ded;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }​
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background-color: white;
+      border: 2px solid #e74c3c;
+    }
+    input[type="range"]::-webkit-slider-thumb:active {
+      transform: scale(1.6);
+    }

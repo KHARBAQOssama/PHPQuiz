@@ -24,9 +24,13 @@
             <div class="to-container">
                 <div class="to" id="to2"></div>
             </div>
-            <h3 id="qp"><i class="uil uil-map-marker-question"></i></h3>
+            <h3 id="pp"><i class="uil uil-setting"></i></h3>
             <div class="to-container">
                 <div class="to" id="to3"></div>
+            </div>
+            <h3 id="qp"><i class="uil uil-map-marker-question"></i></h3>
+            <div class="to-container">
+                <div class="to" id="to4"></div>
             </div>
             <h3 id="rp"><i class="uil uil-clipboard"></i></h3>
             
@@ -51,7 +55,7 @@
                         <p><span class="order">4</span>this is the fourth information about our quiz</p>
                         <div class="guide-buttons">
                             <button id="exit-guide">EXIT</button>
-                            <button id="take-quiz">TAKE A QUIZ</button>
+                            <button id="start" >TAKE A QUIZ</button>
                         </div>
                         
                     </div>
@@ -59,13 +63,19 @@
                 </div>
             </section>
 
+            <!-- param part  -->
+            <section class="param" id="param">
+                <h3>Sittings</h3>
+                <p>choose how many questions you like to answer</p>
+
+                <span id="value">10</span>
+                <input id="questions-number" type="range" min="3" required>
+                <button id="take-quiz">Let's Go</button>
+            </section>
+
+
             <!-- quiz part -->
             <section id="quiz" class="quiz">
-                <!-- <form class="param">
-                    <p>choose how many questions you like to answer</p>
-                    <input id="questions-number" type="number" min="3" required>
-                    <button id="start">Let's Go</button>
-                </form> -->
                     <header>
                         <div class="timer"><i class="uil uil-stopwatch"></i><span class="time-sec">15</span></div>
                         <div class="progress-container">
