@@ -176,9 +176,6 @@ function getAnswer(x){
         x.classList.add('incorrect');
         options[answer-1].classList.add('correct');
     }
-    options.forEach(option => {
-        
-    });
     console.log(correctAnswers);
     setTimeout(()=>{
         
