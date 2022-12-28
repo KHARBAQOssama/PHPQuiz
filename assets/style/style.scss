@@ -200,30 +200,6 @@ body{
                             display: flex;
                             flex-direction: column;
                             margin: 1em 0;
-                            .timer{
-                                width: 10%;
-                                display: flex;
-                                align-items: center;
-                                border: 2px solid white;
-                                border-radius: 0.7em 0 0.7em 0;
-                                margin-bottom: 1em;
-                                
-                                span{
-                                    background-color: white;
-                                    color: #5874CC;
-                                    border-radius: 0.7em 0 0.6em 0;
-                                    width: 50%;
-                                    text-align: center;
-                                    -webkit-border-radius: 0.7em 0 0.6em 0;
-                                    -moz-border-radius: 0.7em 0 0.6em 0;
-                                    -ms-border-radius: 0.7em 0 0.6em 0;
-                                    -o-border-radius: 0.7em 0 0.6em 0;
-                                    }
-                                i{
-                                    text-align: center;
-                                    width: 50%;
-                                }
-                            }
                             .progress-container{
                                 width: 60%;
                                 border: 2px solid white;
@@ -439,21 +415,26 @@ input[type="range"] {
     border-radius: 5px;
     margin: 0 auto;
     outline: 0;
+        &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        background-color: #708ded;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        border: 2px solid white;
+        cursor: pointer;
+        transition: .3s ease-in-out;
+    }​
+        &::-webkit-slider-thumb:hover {
+        background-color: white;
+        border: 2px solid #e74c3c;
+        }
+        &::-webkit-slider-thumb:active {
+        transform: scale(1.8);
+        -webkit-transform: scale(1.8);
+        -moz-transform: scale(1.8);
+        -ms-transform: scale(1.8);
+        -o-transform: scale(1.8);
+    }
   }
-  input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    background-color: #708ded;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 2px solid white;
-    cursor: pointer;
-    transition: .3s ease-in-out;
-  }​
-    input[type="range"]::-webkit-slider-thumb:hover {
-      background-color: white;
-      border: 2px solid #e74c3c;
-    }
-    input[type="range"]::-webkit-slider-thumb:active {
-      transform: scale(1.6);
-    }
+  

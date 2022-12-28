@@ -139,7 +139,7 @@ function showQuestion(index){
         }
     },500);
 
-
+    
     question.innerText = questionsWeHave[index]['question'];
     question.setAttribute('data-number',questionsWeHave[index]['answer']);
     for(let i =0 ;i<options.length;i++){
@@ -160,9 +160,12 @@ function showQuestion(index){
 
 
 function getAnswer(x){
+
     for(let i=0;i<4;i++){
         options[i].classList.add("disabled");
     }
+
+
     let answer = x.parentElement.previousElementSibling.dataset['number'];
     let uAnswer = x.dataset['number'];
     console.log(answer);
@@ -173,6 +176,9 @@ function getAnswer(x){
         x.classList.add('incorrect');
         options[answer-1].classList.add('correct');
     }
+    options.forEach(option => {
+        
+    });
     console.log(correctAnswers);
     setTimeout(()=>{
         
@@ -215,9 +221,3 @@ function result(){
     questionsTotal.innerText = total;
     
 }
-
-
-
-// console.log(total,correctAnswers);
-
-// console.log(options[1].parentElement.previousElementSibling);
